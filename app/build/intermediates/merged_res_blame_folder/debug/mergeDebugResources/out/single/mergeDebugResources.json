@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.zen2api.app-debug-29:/xml_data_extraction_rules.xml.flat",
+        "source": "com.zen2api.app-main-31:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.zen2api.app-debug-29:/xml_network_security_config.xml.flat",
+        "source": "com.zen2api.app-main-31:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.zen2api.app-debug-29:/drawable_bg_card.xml.flat",
+        "source": "com.zen2api.app-main-31:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.zen2api.app-debug-29:/xml_backup_rules.xml.flat",
+        "source": "com.zen2api.app-main-31:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.zen2api.app-debug-29:/layout_activity_main.xml.flat",
+        "source": "com.zen2api.app-main-31:/layout/activity_main.xml"
+    }
+]

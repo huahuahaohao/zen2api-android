@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color green
+color purple_200
+color purple_500
+color purple_700
+color red
+color teal_200
+color teal_700
+color white
+drawable bg_card
+id btnContainer
+id btnStart
+id btnStop
+id btnTest
+id cardServices
+id tvServices
+id tvStatus
+id tvStatusLabel
+id tvSubtitle
+id tvTitle
+layout activity_main
+string app_name
+string services_list
+string settings
+string start_services
+string stop_services
+string test_endpoints
+style Theme.Zen2API
+style Theme.Zen2API.NoActionBar
+xml backup_rules
+xml data_extraction_rules
+xml network_security_config

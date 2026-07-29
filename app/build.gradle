@@ -1,0 +1,77 @@
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.chaquo.python"
+
+android {
+    namespace = "com.zen2api"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.zen2api"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Python configuration - moved OUTSIDE defaultConfig for Chaquopy 12.x
+        python {
+            version = "3.10"
+            pip {
+                install "fastapi==0.109.0"
+                install "uvicorn[standard]==0.27.0"
+                install "httpx==0.26.0"
+                install "pydantic==2.5.3"
+                install "pydantic-settings==2.1.0"
+                install "python-dotenv==1.0.0"
+            }
+        }
+
+        // NDK ABI filters
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/*"
+        }
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.13.1"
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+    implementation "androidx.activity:activity-ktx:1.8.2"
+
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
+}

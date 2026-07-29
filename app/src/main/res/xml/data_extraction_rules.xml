@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dataExtractionRules>
+        <cloudBackup>
+            <exclude domain="database" path="*" />
+            <exclude domain="sharedpref" path="*" />
+        </cloudBackup>
+        <deviceTransfer>
+            <exclude domain="database" path="*" />
+            <exclude domain="sharedpref" path="*" />
+        </deviceTransfer>
+    </dataExtractionRules>
+</resources>
