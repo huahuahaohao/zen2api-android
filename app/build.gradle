@@ -1,6 +1,7 @@
 plugins {
     id "com.android.application"
     id "org.jetbrains.kotlin.android"
+    id "com.chaquo.python"
 }
 
 android {
@@ -53,7 +54,6 @@ android {
 }
 
 // Python configuration - TOP LEVEL (project level) for Chaquopy 13.x
-apply plugin: "com.chaquo.python"
 python {
     version = "3.10"
     pip {
