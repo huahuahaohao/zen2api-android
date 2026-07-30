@@ -1,4 +1,10 @@
 pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://chaquo.com/maven" }
+    }
     plugins {
         id "com.chaquo.python" version "13.0.0"
     }
