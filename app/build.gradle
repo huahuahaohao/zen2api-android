@@ -1,8 +1,8 @@
 plugins {
     id "com.android.application"
     id "org.jetbrains.kotlin.android"
+    id "com.chaquo.python"
 }
-apply plugin: "com.chaquo.python"
 
 android {
     namespace = "com.zen2api"
@@ -51,18 +51,18 @@ android {
             useLegacyPackaging = true
         }
     }
+}
 
-    // Python configuration - inside android {} for Chaquopy 13.x
-    python {
-        version = "3.10"
-        pip {
-            install "fastapi==0.109.0"
-            install "uvicorn[standard]==0.27.0"
-            install "httpx==0.26.0"
-            install "pydantic==2.5.3"
-            install "pydantic-settings==2.1.0"
-            install "python-dotenv==1.0.0"
-        }
+// Python configuration - TOP LEVEL for Chaquopy 13.x
+python {
+    version = "3.10"
+    pip {
+        install "fastapi==0.109.0"
+        install "uvicorn[standard]==0.27.0"
+        install "httpx==0.26.0"
+        install "pydantic==2.5.3"
+        install "pydantic-settings==2.1.0"
+        install "python-dotenv==1.0.0"
     }
 }
 
