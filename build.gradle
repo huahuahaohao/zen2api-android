@@ -3,10 +3,12 @@ buildscript {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { url "https://chaquo.com/maven" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:8.4.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20"
+        classpath "com.chaquo.python:gradle:13.0.0"
     }
 }
 
